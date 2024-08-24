@@ -1,10 +1,22 @@
 package Utils;
 
-import entities.Produto;
+import Produtos.Produto;
 
 public class Racao extends Produto {
-  public Racao(int id, String nome, Double preco, int quantidade, String categoria, String marca, String descricao,
-      String dataDeValidade, String peso, String tipo) {
-    super(id, nome, preco, quantidade, categoria, marca, descricao, dataDeValidade, peso, tipo);
+
+  public Racao(String nome, Double preco, String categoria, String marca, int quantidadeEstoque,
+      String descricao,
+      String dataValidade, Double peso, String especie, boolean disponivel) {
+
+    super(nome, preco, categoria, marca, quantidadeEstoque, descricao, dataValidade, peso, especie, disponivel);
   }
+
+  // Produto produto = new Produto();
+
+  // public Racao(String nome, Double preco, String categoria, String marca, int
+  // quantidadeEstoque,
+  // String descricao,
+  // String dataValidade, Double peso, String especie, boolean disponivel) {
+
+  // }
 }

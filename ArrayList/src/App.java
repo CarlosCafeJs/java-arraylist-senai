@@ -1,69 +1,37 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import Produtos.Produto;
 // import java.util.Scanner; 
+import Utils.Racao;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        List<Produto> carrinho = new ArrayList<>();
-        Produto produto = new Produto();
+        public static void main(String[] args) throws Exception {
+                // List<Produtos> carrinho = new ArrayList<>();
 
-        carrinho.add(new Racao(1, "Ração Pedigree", 49.50, 1500, "Alimento", "Pedigree", "Melhor ração do mercado.",
-                "01/01/2025", "20kg", "Geral"));
-        carrinho.add(new Petisco(2, "Biscoito para Cães", 19.90, 500, "Petisco", "Dog's Best", "Delicioso e saudável.",
-                "01/05/2024", "500g", "Cães"));
-        carrinho.add(new Acessorio(3, "Coleira de Nylon", 29.90, 200, "Acessório", "PetSafe", "Resistente e ajustável.",
-                "N/A", "50g", "Geral"));
-        carrinho.add(new Higiene(4, "Shampoo para Cães", 24.90, 300, "Higiene", "PetClean",
-                "Hipoalergênico e perfumado.", "01/09/2024", "500ml", "Cães"));
-        carrinho.add(new Medicamento(5, "Vermífugo para Gatos", 39.90, 100, "Medicamento", "VetCare",
-                "Eficaz contra vermes.", "01/11/2024", "20ml", "Gatos"));
-        carrinho.add(new Equipamento(6, "Aquário Completo", 299.90, 50, "Equipamento", "AquaWorld",
-                "Ideal para peixes de pequeno porte.", "N/A", "5kg", "Peixes"));
-        carrinho.add(new AlimentoEspecial(7, "Ração para Peixes Ornamentais", 14.90, 200, "Alimento Especial",
-                "FishFood", "Rica em nutrientes.", "01/07/2025", "100g", "Peixes"));
-        carrinho.add(new AreiaSanitaria(8, "Areia Sanitária para Gatos", 34.90, 250, "Higiene", "CatLitter",
-                "Controle de odores e absorção superior.", "01/12/2024", "5kg", "Gatos"));
-        carrinho.add(new Escova(9, "Escova de Cerdas", 15.90, 100, "Higiene", "PetBrush",
-                "Ideal para escovar pelos longos.", "N/A", "200g", "Geral"));
-        carrinho.add(new RoupasParaPets(10, "Jaqueta para Cachorros", 69.90, 150, "Acessório", "WarmPaws",
-                "Resistente à água e confortável.", "N/A", "300g", "Cães"));
-        carrinho.add(new Arranhador(11, "Arranhador de Sisal", 89.90, 80, "Acessório", "CatScratcher",
-                "Ideal para gatos, evita arranhões nos móveis.", "N/A", "1kg", "Gatos"));
-        carrinho.add(new CaixaDeTransporte(12, "Caixa de Transporte para Pets", 129.90, 60, "Equipamento", "SafeTravel",
-                "Resistente e confortável para viagens.", "N/A", "2kg", "Geral"));
-        carrinho.add(new FonteDeAgua(13, "Fonte de Água para Pets", 99.90, 70, "Equipamento", "FreshFlow",
-                "Filtra e mantém a água fresca.", "N/A", "800g", "Geral"));
-        carrinho.add(new BrinquedoCachorro(14, "Brinquedo de Borracha para Cães", 25.90, 150, "Brinquedo", "DogFun",
-                "Resistente e ideal para mastigação.", "N/A", "150g", "Cães"));
-        carrinho.add(new BrinquedoGato(15, "Brinquedo com Catnip para Gatos", 19.90, 200, "Brinquedo", "CatJoy",
-                "Estimulante e divertido para gatos.", "N/A", "50g", "Gatos"));
-        carrinho.add(new ComedouroAutomatizado(16, "Comedouro Automatizado", 159.90, 40, "Equipamento", "AutoFeeder",
-                "Programável para refeições regulares.", "N/A", "1.2kg", "Geral"));
-        carrinho.add(new Bebedouro(17, "Bebedouro de Alumínio", 39.90, 120, "Acessório", "PetWater",
-                "Durável e fácil de limpar.", "N/A", "400g", "Geral"));
-        carrinho.add(new MantaParaPets(18, "Manta Aconchegante para Pets", 49.90, 90, "Acessório", "PetBlanket",
-                "Quente e confortável.", "N/A", "500g", "Geral"));
-        carrinho.add(new TapeteHigienico(19, "Tapete Higiênico para Cães", 29.90, 300, "Higiene", "DogPad",
-                "Absorve e controla odores.", "01/06/2024", "20 unidades", "Cães"));
-        carrinho.add(new BolsaDeTransporte(20, "Bolsa de Transporte para Gatos", 89.90, 75, "Equipamento", "CatCarrier",
-                "Compacta e prática para transporte.", "N/A", "600g", "Gatos"));
-        carrinho.add(new CortadorDeUnhas(21, "Cortador de Unhas para Pets", 22.90, 150, "Higiene", "PetClaw",
-                "Fácil e seguro para usar.", "N/A", "100g", "Geral"));
-        carrinho.add(new AdesivoAntipulgas(22, "Adesivo Antipulgas", 19.90, 200, "Medicamento", "FleaGuard",
-                "Protege contra pulgas e carrapatos.", "01/08/2024", "1 unidade", "Geral"));
-        carrinho.add(new TrituradorDeRacao(23, "Triturador de Ração", 139.90, 50, "Equipamento", "GrainCrusher",
-                "Para triturar ração e outros alimentos.", "N/A", "2kg", "Geral"));
-        carrinho.add(new Antipulgas(24, "Antipulgas em Spray", 29.90, 100, "Medicamento", "FleaSpray",
-                "Elimina pulgas e carrapatos.", "01/10/2024", "250ml", "Geral"));
-        carrinho.add(new Vitaminas(25, "Vitaminas para Cães", 44.90, 150, "Medicamento", "PetVitamins",
-                "Suplemento para saúde e vitalidade.", "01/07/2025", "100g", "Cães"));
+                List<Racao> itens = new ArrayList<>();
+                itens.add(new Racao("Racao Pedigree", 48.00, "Alimento", "Pedigree", 500,
+                                "Alimento saudavel e nutritivo.",
+                                "05/2025", 20.00, "Cachorro", true));
 
-        for (Produto produto : carrinho) {
-            System.out.println(produto);
-            System.out.println("-------------------------");
+                itens.add(new Racao("Racao Deal", 50.00, "Alimento", "Deal", 750,
+                                "Alimento saudavel e nutritivo.",
+                                "05/2025", 30.00, "Cachorro", true));
+
+                for (Racao produto : itens) {
+                        System.out.println("Produto: " + produto.getNome() +
+                                        ", Preço: " + produto.getPreco() +
+                                        ", Categoria: " + produto.getCategoria() +
+                                        ", Marca: " + produto.getMarca() +
+                                        ", Quantidade em Estoque: " + produto.getQuantidadeEstoque() +
+                                        ", Descrição: " + produto.getDescricao() +
+                                        ", Data de Validade: " + produto.getDataDeValidade() +
+                                        ", Peso: " + produto.getPeso() +
+                                        ", Espécie: " + produto.getEspecie() +
+                                        ", Disponível: " + produto.isDisponivel());
+                }
+
         }
-    }
 }
 
 // / Interface para definir métodos relacionados a preços
